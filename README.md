@@ -1,5 +1,3 @@
-
-
 # Angular For Beginners Playground
 A playground for Getting Started with the Angular framework.
 
