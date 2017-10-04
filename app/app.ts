@@ -1,33 +1,29 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { Component, NgModule } from '@angular/core';
 
-
-
-import {Component} from "@angular/core";
-import {NgModule} from "@angular/core";
-import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
-import {BrowserModule} from "@angular/platform-browser";
-
-
-
+import { SearchBoxComponent } from './components/search-box.component';
 
 @Component({
-    selector:'my-app',
-    template: `<h1>Hello World !</h1>`
+    selector: 'app-root',
+    template: `<search-box [placeholder]="'Please type your search'"><search-box>`
 })
-export class HelloWorld {
-
-
+export class AppComponent {
 }
 
- 
 @NgModule({
-    declarations: [HelloWorld],
-    imports: [BrowserModule],
-    bootstrap: [HelloWorld]
+    declarations: [
+        AppComponent,
+        SearchBoxComponent
+    ],
+    imports: [
+        BrowserModule
+    ],
+    bootstrap: [
+        AppComponent
+    ]
 })
 export class AppModule {
-
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule);
-
-
